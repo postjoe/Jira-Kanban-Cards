@@ -96,6 +96,7 @@ class CardsController {
 			"issuetype" => $ticket->fields->issuetype->name,
 			"key" => $ticket->key,
 			"summary" => $ticket->fields->summary,
+			"description" => $ticket->fields->description,
 			"reporter" => $ticket->fields->reporter ? $ticket->fields->reporter->displayName : "n/a",
 			"assignee" => $ticket->fields->assignee ? $ticket->fields->assignee->displayName : "n/a",
 			"parent" => isset($ticket->fields->parent) ? $ticket->fields->parent->key : "",
@@ -108,6 +109,7 @@ class CardsController {
 		 */
 		$customFields = array(
 			"epickey" => "customfield_11100",
+			"estimate" => "customfield_10004",
 			"rank" => "customfield_10004"
 		);
 

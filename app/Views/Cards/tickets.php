@@ -31,7 +31,7 @@ $helper = new CardsHelper();
 	<div class="epic epicgroup_<?php echo $helper->getEpicNumber($ticket['epic']); ?>"><?php echo $ticket["epic"] ?></div>
 	<?php } ?>
 	<div class="number"><?php echo $ticket["key"] ?></div>
-	<div class="summary"><?php echo $ticket["summary"] ?></div>
+	<div class="summary"><?php echo $ticket["summary"] ?><br><?php echo $ticket["description"] ?></div>
 	<?php if( isset($ticket['rank']) ) { ?>
 	<div class="rank"><?php echo $ticket["rank"] ?></div>
 	<?php } ?>
@@ -43,6 +43,6 @@ $helper = new CardsHelper();
 		<span class="name"><?php echo $ticket["assignee"] ?></span>
 		<img class="avatar" src="<?php echo $ticket['avatar'] ?>" />
 	</div>
-	<div class="remaining_time"><?php echo $ticket["remaining_time"] ?></div>
+	<div class="remaining_time"><?php echo $ticket["remaining_time"] ?><?php echo $ticket["estimate"] ?>Points: </div>
 </div>
 <?php } ?>
